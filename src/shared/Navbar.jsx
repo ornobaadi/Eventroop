@@ -102,7 +102,7 @@ const Navbar = () => {
                             <input
                                 ref={dateInputRef}
                                 type="text"
-                                className="input rounded-full pr-12 pl-4 w-52 h-12 shadow-md bg-white border border-gray-300 text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#63CFA0] focus:border-transparent"
+                                className="input rounded-full pr-12 pl-4 w-60 h-12 shadow-md bg-white border border-gray-300 text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#63CFA0] focus:border-transparent"
                                 value={selectedDate || ''}
                                 onClick={toggleCalendar}
                                 onChange={(e) => setSelectedDate(e.target.value)}
@@ -123,7 +123,7 @@ const Navbar = () => {
                             <input
                                 ref={searchInputRef}
                                 type="text"
-                                className="input rounded-full pr-12 pl-4 py-2 w-52 h-12 shadow-md bg-white border border-gray-300 text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#63CFA0] focus:border-transparent"
+                                className="input rounded-full pr-12 pl-4 py-2 w-60 h-12 shadow-md bg-white border border-gray-300 text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#63CFA0] focus:border-transparent"
                                 placeholder="Search"
                             />
                             <span className="absolute right-2 top-1/2 transform -translate-y-1/2">
