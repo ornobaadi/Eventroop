@@ -12,7 +12,7 @@ const Tabs = () => {
             <div className="border-b border-gray-200">
                 <div className="flex">
                     <button
-                        className={`px-40 py-4 font-medium text-2xl relative ${activeTab === 'Info'
+                        className={`px-36 py-4 font-medium text-2xl relative ${activeTab === 'Info'
                                 ? 'text-orange-500 border-b-3 border-orange-500'
                                 : 'text-gray-700 hover:text-gray-900'
                             }`}
@@ -21,7 +21,7 @@ const Tabs = () => {
                         Info
                     </button>
                     <button
-                        className={`px-40 py-4 font-medium text-2xl relative ${activeTab === 'Player'
+                        className={`px-36 py-4 font-medium text-2xl relative ${activeTab === 'Player'
                                 ? 'text-orange-500 border-b-3 border-orange-500'
                                 : 'text-gray-700 hover:text-gray-900'
                             }`}
@@ -30,7 +30,7 @@ const Tabs = () => {
                         Player
                     </button>
                     <button
-                        className={`px-40 py-4 font-medium text-2xl relative ${activeTab === 'Comments'
+                        className={`px-36 py-4 font-medium text-2xl relative ${activeTab === 'Comments'
                                 ? 'text-orange-500 border-b-3 border-orange-500'
                                 : 'text-gray-700 hover:text-gray-900'
                             }`}

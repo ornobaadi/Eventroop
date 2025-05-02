@@ -1,6 +1,7 @@
 import React from 'react';
 import { Clock, MapPin, Calendar } from 'lucide-react';
 import { HiOutlineChartBar } from 'react-icons/hi';
+import Events from '../Home/Events';
 
 const Info = () => {
     return (

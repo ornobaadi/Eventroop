@@ -11,7 +11,7 @@ const Player = () => {
   ];
 
   return (
-    <div className="py-4 min-h-screen">
+    <div className="py-8 min-h-screen">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">Players</h2>
         <span className="text-gray-800 text-2xl flex items-center gap-2">
@@ -21,10 +21,10 @@ const Player = () => {
       {players.map((player, index) => (
         <div
           key={index}
-          className="flex items-center justify-between bg-[#34735f] text-[#34735f] rounded-2xl p-3 mb-2"
+          className="flex items-center justify-between bg-[#34735f] text-[#34735f] rounded-2xl p-4 mb-2"
         >
           <div className="flex items-center">
-            <span className="w-8 h-8 bg-[#fde8cd] font-medium rounded-full flex items-center justify-center mr-2">
+            <span className="w-12 h-12 bg-[#fde8cd] font-medium rounded-full flex items-center justify-center mr-2">
               {player.initials}
             </span>
             <div className="flex items-baseline">
