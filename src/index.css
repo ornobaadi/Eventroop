@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
-@import url('./css/satoshi.css');
 
 .satoshi {
-  font-family: 'Satoshi-Regular';
+  font-family: 'Satoshi', sans-serif;
 }
