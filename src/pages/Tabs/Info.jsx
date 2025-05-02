@@ -109,7 +109,7 @@ const Info = () => {
                     <div className="flex items-center">
                         <div className="relative">
                             <img
-                                src="/src/assets/alex.png"
+                                src="/alex.png"
                                 alt="Alex Mercer"
                                 className="w-28 h-28 rounded-full object-cover"
                             />

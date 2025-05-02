@@ -59,7 +59,7 @@ const Comments = () => {
 
   return (
     <div className='py-10'>
-      <div className=" p-10 bg-white rounded-3xl">
+      <div className=" px-5 py-6 bg-white rounded-3xl">
         {comments.map((comment) => (
           <div key={comment.id} className="mb-4">
             {/* Main comment */}

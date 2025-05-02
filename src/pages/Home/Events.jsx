@@ -100,7 +100,7 @@ const Events = () => {
             attending: "6/8",
             price: "320",
             tags: ["Football", "Below 25y"],
-            imageUrl: "/src/assets/events/Swim.png"
+            imageUrl: "/Swim.png"
         },
         {
             id: 2,
@@ -112,7 +112,7 @@ const Events = () => {
             attending: "6/8",
             price: "320",
             tags: ["Football", "Below 25y"],
-            imageUrl: "/src/assets/events/hockey.jpg"
+            imageUrl: "/hockey.jpg"
         },
         {
             id: 3,
@@ -124,7 +124,7 @@ const Events = () => {
             attending: "6/8",
             price: "320",
             tags: ["Football", "Below 25y"],
-            imageUrl: "/src/assets/events/Swim.png"
+            imageUrl: "/Swim.png"
         },
         {
             id: 4,
@@ -136,7 +136,7 @@ const Events = () => {
             attending: "6/8",
             price: "320",
             tags: ["Football", "Below 25y"],
-            imageUrl: "/src/assets/events/hockey.jpg"
+            imageUrl: "/hockey.jpg"
         },
         {
             id: 5,
@@ -148,7 +148,7 @@ const Events = () => {
             attending: "6/8",
             price: "320",
             tags: ["Football", "Below 25y"],
-            imageUrl: "/src/assets/events/Swim.png"
+            imageUrl: "/Swim.png"
         }
     ];
 

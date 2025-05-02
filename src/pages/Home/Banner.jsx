@@ -11,7 +11,7 @@ export default function FootballBanner() {
                     {/* Left side main image */}
                     <div className="relative w-full  md:w-2/3 aspect-5/2 overflow-hidden rounded-4xl">
                         <img
-                            src="/src/assets/banner/banner-hd.jpg"
+                            src="/banner-hd.jpg"
                             alt="Football match night view"
                             className="w-full h-full object-cover"
                         />
@@ -30,14 +30,14 @@ export default function FootballBanner() {
                     <div className="w-full md:w-1/3 flex flex-col gap-4">
                         <div className="h-1/2 aspect-5/2 overflow-hidden rounded-4xl">
                             <img
-                                src="/src/assets/banner/banner-hd.jpg"
+                                src="/banner-hd.jpg"
                                 alt="Thumbnail 1"
                                 className="w-full h-full object-cover"
                             />
                         </div>
                         <div className="h-1/2 aspect-5/2 overflow-hidden rounded-4xl relative">
                             <img
-                                src="/src/assets/banner/banner-hd.jpg"
+                                src="/banner-hd.jpg"
                                 alt="Thumbnail 2"
                                 className="w-full h-full object-cover "
                             />
