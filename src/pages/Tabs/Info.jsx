@@ -102,7 +102,7 @@ const Info = () => {
             <div className="divider my-10"></div>
 
             {/* Hosted by Section */}
-            <div className="">
+            <div className="pb-16">
                 <h2 className="text-3xl font-semibold mb-5">Hosted by</h2>
                 <div className="bg-gray-600 p-7 rounded-2xl flex items-center justify-between max-w-3xl">
                     <div className="flex items-center">

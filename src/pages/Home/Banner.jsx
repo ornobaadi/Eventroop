@@ -75,7 +75,7 @@ export default function FootballBanner() {
                 {/* Join Event Card */}
                 <div className="bg-white rounded-3xl w-full md:w-1/3 shadow-sm px-5 py-5 flex flex-col items-center space-y-4">
                     {/* Price and spots info */}
-                    <div className="flex justify-between items-center w-full p-5 rounded-xl border border-gray-200">
+                    <div className="flex justify-between items-center w-full my-3 p-5 rounded-xl border border-gray-200">
                         <h1 className="text-red-500 text-xl font-medium">6 spots left</h1>
                         <h1 className="text-gray-900 text-xl font-semibold">
                             320tk /player<span className="text-gray-500 text-sm font-normal"> (both)</span>
@@ -83,7 +83,7 @@ export default function FootballBanner() {
                     </div>
 
                     {/* CTA Button */}
-                    <button className="w-full bg-[#63cfa0] hover:bg-emerald-500 text-xl text-black font-semibold py-5 rounded-full transition">
+                    <button className="w-full bg-[#63cfa0] hover:bg-emerald-500 text-xl text-black font-semibold py-5 my-3 rounded-full transition">
                         Join event
                     </button>
                 </div>
