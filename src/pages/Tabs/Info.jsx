@@ -1,14 +1,13 @@
 import React from 'react';
 import { Clock, MapPin, Calendar } from 'lucide-react';
-import { MdOutlineNetworkCell } from 'react-icons/md';
 import { HiOutlineChartBar } from 'react-icons/hi';
 
 const Info = () => {
     return (
-        <div className="py-2">
+        <div className="my-6 w-5/5">
             {/* Tags */}
             <div className='flex justify-between'>
-                <div className="flex flex-wrap gap-2 my-6">
+                <div className="flex flex-wrap gap-2 my-4">
                     <span className="px-6 py-2 text-xl bg-cyan-100 text-gray-600 rounded-full">Football</span>
                     <span className="px-6 py-2 text-xl bg-cyan-100 text-gray-600 rounded-full">Relay</span>
                     <span className="px-6 py-2 text-xl bg-pink-50 text-pink-800 rounded-full">Female</span>
@@ -20,11 +19,11 @@ const Info = () => {
                 </div>
             </div>
 
-            <div className="divider "></div>
+            <div className="divider my-10"></div>
 
 
             {/* About Section */}
-            <h2 className="text-3xl font-semibold mb-3">About this event</h2>
+            <h2 className="text-3xl font-semibold mb-5">About this event</h2>
             <p className="text-gray-700 mb-2 max-w-2xl">
                 Learn about the capital's first beavers in 400 years from the Ealing Beaver project, make your own
                 mushroom growing starter kit with urban agriculture experts, before joining Roma the Engineer to get
@@ -32,7 +31,7 @@ const Info = () => {
             </p>
             <button className="text-blue-500 text-sm font-medium hover:underline cursor-pointer">Read more</button>
 
-            <div className="divider"></div>
+            <div className="divider my-10"></div>
 
             {/* Location Section */}
             <div className="mt-8 max-w-2xl items-start">
@@ -46,11 +45,11 @@ const Info = () => {
                 </div>
             </div>
 
-            <div className="divider"></div>
+            <div className="divider my-10"></div>
 
             {/* Good to know Section */}
             <div className="mt-8">
-                <h2 className="text-3xl font-semibold mb-3">Good to know</h2>
+                <h2 className="text-3xl font-semibold mb-5">Good to know</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-4xl">
                     {/* Highlights */}
@@ -100,10 +99,10 @@ const Info = () => {
                 </div>
             </div>
 
-            <div className="divider"></div>
+            <div className="divider my-10"></div>
 
             {/* Hosted by Section */}
-            <div className="mt-8">
+            <div className="">
                 <h2 className="text-3xl font-semibold mb-5">Hosted by</h2>
                 <div className="bg-gray-600 p-7 rounded-2xl flex items-center justify-between max-w-3xl">
                     <div className="flex items-center">

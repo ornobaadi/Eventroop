@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
-import { Heart, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { HiChartBar } from 'react-icons/hi';
+import { FaHeart } from 'react-icons/fa';
 
 const EventCard = ({ title, date, time, location, spots, attending, price, tags, imageUrl, index }) => {
     return (
@@ -11,8 +13,8 @@ const EventCard = ({ title, date, time, location, spots, attending, price, tags,
                     alt={title}
                     className="w-full h-full object-cover"
                 />
-                <button className="absolute top-3 right-3 p-1 rounded-full bg-white bg-opacity-70">
-                    <Heart className="h-6 w-6 text-gray-600" />
+                <button className="absolute top-3 right-3 p-1 rounded-full">
+                    <FaHeart className="h-6 w-6 text-gray-700 stroke-white stroke-20" />
                 </button>
 
                 {/* Image dots pagination */}
@@ -28,50 +30,53 @@ const EventCard = ({ title, date, time, location, spots, attending, price, tags,
 
             <div className="card-body p-4">
                 {/* Tags */}
-                <div className="flex gap-2 mb-2">
-                    {tags.map((tag, i) => (
-                        <span
-                            key={i}
-                            className={`px-3 py-1 text-xs rounded-full ${tag.includes('Football') ? 'bg-green-100 text-green-800' : 'bg-purple-100 text-purple-800'
-                                }`}
-                        >
-                            {tag}
-                        </span>
-                    ))}
-                    <div className="flex items-center px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full ml-auto">
-                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1"></div>
-                        Advanced
+                <div className="flex justify-between gap-2 mb-2">
+                    <div className='gap-1 flex'>
+                        {tags.map((tag, i) => (
+                            <span
+                                key={i}
+                                className={`px-3 py-1 text-sm rounded-full ${tag.includes('Football') ? 'bg-green-100 text-green-800' : 'bg-purple-100 text-purple-800'
+                                    }`}
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+
+                    <div className="flex gap-2 justify-between items-center text-md text-green-600">
+                        <HiChartBar />
+                        <h1 className='text-gray-600'>Advanced</h1>
                     </div>
                 </div>
 
                 {/* Event title */}
-                <h2 className="card-title text-lg font-bold text-gray-800">{title}</h2>
+                <h2 className="card-title text-3xl font-medium text-emerald-700">{title}</h2>
 
                 {/* Date and time */}
-                <div className="flex items-center text-sm text-gray-600 mt-1">
+                <div className="flex items-center text-base text-gray-800">
                     {date} • {time}
                 </div>
 
                 {/* Location */}
-                <div className="flex items-center text-sm text-gray-600 mt-1">
+                <div className="flex items-center text-base text-gray-800">
                     <MapPin className="h-4 w-4 text-red-500 mr-1" />
                     {location}
                 </div>
 
                 {/* Footer */}
-                <div className="flex justify-between items-center mt-4">
+                <div className="flex justify-end items-center mt-4">
                     <div className="text-red-500 text-sm font-medium">
                         {spots} spots left
                     </div>
                 </div>
 
-                <div className="flex justify-between items-center mt-2 pt-2 border-t border-gray-100">
+                <div className="flex justify-between items-end pt-2">
                     <div className="text-sm text-gray-600">
                         {attending} attending
                     </div>
-                    <div className="text-lg font-bold flex items-center">
-                        <span className="text-gray-500 text-sm mr-1">₹</span>
-                        {price}
+                    <div className="text-lg flex items-center">
+                        <span className="text-white bg-black rounded-full py-0.3 px-1.5 text-base mr-1">৳</span>
+                        <h1 className='text-3xl font-medium'>{price}</h1>
                         <span className="text-gray-500 text-sm">/person</span>
                     </div>
                 </div>
@@ -91,8 +96,8 @@ const Events = () => {
             date: "Thu, Dec 5",
             time: "12:30AM - 12:30PM",
             location: "Bashundhara Sports Complex",
-            spots: "2 spots left",
-            attending: "6/8 attending",
+            spots: "2",
+            attending: "6/8",
             price: "320",
             tags: ["Football", "Below 25y"],
             imageUrl: "/src/assets/events/Swim.png"
@@ -103,8 +108,8 @@ const Events = () => {
             date: "Thu, Dec 5",
             time: "12:30AM - 12:30PM",
             location: "Bashundhara Sports Complex",
-            spots: "2 spots left",
-            attending: "6/8 attending",
+            spots: "2",
+            attending: "6/8",
             price: "320",
             tags: ["Football", "Below 25y"],
             imageUrl: "/src/assets/events/hockey.jpg"
@@ -115,8 +120,8 @@ const Events = () => {
             date: "Thu, Dec 5",
             time: "12:30AM - 12:30PM",
             location: "Bashundhara Sports Complex",
-            spots: "2 spots left",
-            attending: "6/8 attending",
+            spots: "2",
+            attending: "6/8",
             price: "320",
             tags: ["Football", "Below 25y"],
             imageUrl: "/src/assets/events/Swim.png"
@@ -127,8 +132,8 @@ const Events = () => {
             date: "Thu, Dec 5",
             time: "12:30AM - 12:30PM",
             location: "Bashundhara Sports Complex",
-            spots: "2 spots left",
-            attending: "6/8 attending",
+            spots: "2",
+            attending: "6/8",
             price: "320",
             tags: ["Football", "Below 25y"],
             imageUrl: "/src/assets/events/hockey.jpg"
@@ -139,8 +144,8 @@ const Events = () => {
             date: "Thu, Dec 5",
             time: "12:30AM - 12:30PM",
             location: "Bashundhara Sports Complex",
-            spots: "2 spots left",
-            attending: "6/8 attending",
+            spots: "2",
+            attending: "6/8",
             price: "320",
             tags: ["Football", "Below 25y"],
             imageUrl: "/src/assets/events/Swim.png"

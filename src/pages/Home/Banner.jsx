@@ -55,8 +55,8 @@ export default function FootballBanner() {
                     <h2 className="text-2xl md:text-6xl font-bold text-gray-900">
                         Road to the Football Finals
                     </h2>
-                    <p className="text-gray-500 text-2xl mt-3">Bashundhara Sports Complex</p>
-                    <p className="text-gray-500 text-2xl mt-2">Mar 14 from 7:30 PM - 9:30 PM</p>
+                    <p className="text-gray-600 text-2xl mt-3">Bashundhara Sports Complex</p>
+                    <p className="text-gray-600 text-2xl mt-2">Mar 14 from 7:30 PM - 9:30 PM</p>
                 </div>
 
                 {/* Action Icons */}
@@ -83,7 +83,7 @@ export default function FootballBanner() {
                     </div>
 
                     {/* CTA Button */}
-                    <button className="w-full bg-emerald-400 hover:bg-emerald-500 text-xl text-black font-semibold py-5 rounded-full transition">
+                    <button className="w-full bg-[#63cfa0] hover:bg-emerald-500 text-xl text-black font-semibold py-5 rounded-full transition">
                         Join event
                     </button>
                 </div>
