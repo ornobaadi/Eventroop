@@ -137,14 +137,14 @@ const Navbar = () => {
                 <div className="navbar-end flex gap-3 ">
                     {/* Leaderboard Button */}
                     <button
-                        className="flex items-center gap-2 px-4 py-2 h-12 bg-[#E6F5EC] text-[#2E7D32] rounded-full"
+                        className="flex items-center gap-2 px-4 py-2 h-12 bg-[#E6F5EC]/70 text-[#4c8371] rounded-full"
                     >
                         <FaMedal className="w-4 h-4" />
                         Leaderboard
                     </button>
                     {/* Login / Sign up Button */}
                     <button
-                        className="px-6 py-2 h-12 bg-white border border-[#2E7D32] text-[#2E7D32] rounded-full"
+                        className="px-6 py-2 h-12 bg-white border border-[#4c8371] text-[#4c8371] rounded-full"
                     >
                         Login / Sign up
                     </button>
