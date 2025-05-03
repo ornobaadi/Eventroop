@@ -14,7 +14,7 @@ export default function FootballBanner() {
             <div className="py-6">
                 <div className="flex flex-col md:flex-row gap-3">
                     {/* Left side main image */}
-                    <div className="relative w-full md:w-2/3 aspect-5/2 overflow-hidden rounded-4xl">
+                    <div className="relative w-full md:w-2/3 aspect-5/2 overflow-hidden rounded-2xl md:rounded-4xl">
                         <img
                             src="/banner-hd.jpg"
                             alt="Football match night view"
@@ -32,14 +32,14 @@ export default function FootballBanner() {
 
                     {/* Right side thumbnails */}
                     <div className="w-full md:w-1/3 flex flex-row md:flex-col gap-2 md:gap-4 mt-2 md:mt-0">
-                        <div className="w-1/2 md:w-full h-auto md:h-1/2 aspect-5/2 overflow-hidden rounded-4xl">
+                        <div className="w-1/2 md:w-full h-auto md:h-1/2 aspect-5/2 overflow-hidden rounded-2xl md:rounded-4xl">
                             <img
                                 src="/banner-hd.jpg"
                                 alt="Thumbnail 1"
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="w-1/2 md:w-full h-auto md:h-1/2 aspect-5/2 overflow-hidden rounded-4xl relative">
+                        <div className="w-1/2 md:w-full h-auto md:h-1/2 aspect-5/2 overflow-hidden rounded-2xl md:rounded-4xl relative">
                             <img
                                 src="/banner-hd.jpg"
                                 alt="Thumbnail 2"
