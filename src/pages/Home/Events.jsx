@@ -1,9 +1,17 @@
 import { useState, useRef } from 'react';
 import { MapPin } from 'lucide-react';
 import { HiChartBar } from 'react-icons/hi';
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 const EventCard = ({ title, date, time, location, spots, attending, price, tags, imageUrl, index }) => {
+    const [isFavorite, setIsFavorite] = useState(false);
+    
+    const toggleFavorite = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsFavorite(!isFavorite);
+    };
+
     return (
         <div className="card bg-base-100 shadow-sm rounded-xl sm:rounded-4xl overflow-hidden">
             {/* Image and Heart button */}
@@ -13,8 +21,15 @@ const EventCard = ({ title, date, time, location, spots, attending, price, tags,
                     alt={title}
                     className="w-full h-full object-cover"
                 />
-                <button className="absolute top-2 sm:top-3 right-2 sm:right-3 p-1 rounded-full">
-                    <FaHeart className="h-4 w-4 sm:h-6 sm:w-6 text-gray-700 stroke-white stroke-20" />
+                <button 
+                    className="absolute top-2 sm:top-3 right-2 sm:right-3 p-1 rounded-full"
+                    onClick={toggleFavorite}
+                >
+                    {isFavorite ? (
+                        <FaHeart className="h-4 w-4 sm:h-6 sm:w-6 text-red-500" />
+                    ) : (
+                        <FaRegHeart className="h-4 w-4 sm:h-6 sm:w-6 text-gray-200 stroke-white" />
+                    )}
                 </button>
 
                 {/* Image dots pagination */}

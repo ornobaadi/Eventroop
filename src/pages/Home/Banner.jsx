@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import { MoreVertical, X } from 'lucide-react';
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { RiShare2Line } from 'react-icons/ri';
 
 export default function FootballBanner() {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isFavorite, setIsFavorite] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
+    
+    const toggleFavorite = () => setIsFavorite(!isFavorite);
 
     return (
         <>
@@ -70,8 +73,15 @@ export default function FootballBanner() {
                     <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-gray-100">
                         <RiShare2Line className="w-6 h-6 text-gray-600" />
                     </button>
-                    <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-gray-100">
-                        <FaHeart className="w-4 h-4 text-gray-600" />
+                    <button 
+                        className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-gray-100"
+                        onClick={toggleFavorite}
+                    >
+                        {isFavorite ? (
+                            <FaHeart className="w-4 h-4 text-red-500" />
+                        ) : (
+                            <FaHeart className="w-4 h-4 text-gray-600" />
+                        )}
                     </button>
                     <button className="w-10 h-10 flex items-center justify-center">
                         <MoreVertical className="w-7 h-7 text-gray-600" />
@@ -114,8 +124,15 @@ export default function FootballBanner() {
                     <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-gray-100">
                         <RiShare2Line className="w-5 h-5 text-gray-600" />
                     </button>
-                    <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-gray-100">
-                        <FaHeart className="w-4 h-4 text-gray-600" />
+                    <button 
+                        className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-gray-100"
+                        onClick={toggleFavorite}
+                    >
+                        {isFavorite ? (
+                            <FaHeart className="w-4 h-4 text-red-500" />
+                        ) : (
+                            <FaHeart className="w-4 h-4 text-gray-600" />
+                        )}
                     </button>
                     <button className="w-10 h-10 flex items-center justify-center">
                         <MoreVertical className="w-6 h-6 text-gray-600" />

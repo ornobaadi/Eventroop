@@ -2,7 +2,7 @@
 
 ![Eventroop Screenshot](/public/mockup.jpeg)  
 
-A sleek, responsive web application crafted with React 19, TypeScript, and Tailwind CSS 4. This project prioritizes modular design, seamless user interactions, and accessibility across all devices.
+A sleek, responsive web application crafted with React 19, JavaScript, and Tailwind CSS 4. This project prioritizes modular design, seamless user interactions, and accessibility across all devices.
 
 ## 🌐 Live Preview
 
@@ -13,7 +13,7 @@ Explore the live application: [Live Link](https://eventroop.web.app/)
 - Modular React components with hooks and functional patterns
 - Responsive layouts optimized for mobile, tablet, and desktop
 - Accessible, user-friendly interface
-- TypeScript for robust type checking
+- JavaScript for robust type checking
 - Tailwind CSS for streamlined, utility-first styling
 
 ## 🔧 Tech Stack
