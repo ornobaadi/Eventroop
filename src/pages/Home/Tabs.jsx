@@ -7,13 +7,14 @@ const Tabs = () => {
     const [activeTab, setActiveTab] = useState('Info');
 
     return (
-        <div className="w-2/3">
+        <div className="w-full lg:w-2/3">
             {/* Tab Navigation */}
             <div className="border-b border-gray-200">
-                <div className="flex">
+                <div className="flex overflow-x-auto">
                     <button
-                        className={`px-36 py-4 font-medium text-2xl relative ${activeTab === 'Info'
-                                ? 'text-orange-500 border-b-3 border-orange-500'
+                        className={`px-4 sm:px-8 md:px-16 lg:px-36 py-4 font-medium text-lg sm:text-xl md:text-2xl whitespace-nowrap flex-1 relative ${
+                            activeTab === 'Info'
+                                ? 'text-orange-500 border-b-2 border-orange-500'
                                 : 'text-gray-700 hover:text-gray-900'
                             }`}
                         onClick={() => setActiveTab('Info')}
@@ -21,8 +22,9 @@ const Tabs = () => {
                         Info
                     </button>
                     <button
-                        className={`px-36 py-4 font-medium text-2xl relative ${activeTab === 'Player'
-                                ? 'text-orange-500 border-b-3 border-orange-500'
+                        className={`px-4 sm:px-8 md:px-16 lg:px-36 py-4 font-medium text-lg sm:text-xl md:text-2xl whitespace-nowrap flex-1 relative ${
+                            activeTab === 'Player'
+                                ? 'text-orange-500 border-b-2 border-orange-500'
                                 : 'text-gray-700 hover:text-gray-900'
                             }`}
                         onClick={() => setActiveTab('Player')}
@@ -30,8 +32,9 @@ const Tabs = () => {
                         Player
                     </button>
                     <button
-                        className={`px-36 py-4 font-medium text-2xl relative ${activeTab === 'Comments'
-                                ? 'text-orange-500 border-b-3 border-orange-500'
+                        className={`px-4 sm:px-8 md:px-16 lg:px-36 py-4 font-medium text-lg sm:text-xl md:text-2xl whitespace-nowrap flex-1 relative ${
+                            activeTab === 'Comments'
+                                ? 'text-orange-500 border-b-2 border-orange-500'
                                 : 'text-gray-700 hover:text-gray-900'
                             }`}
                         onClick={() => setActiveTab('Comments')}

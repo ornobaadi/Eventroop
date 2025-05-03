@@ -31,15 +31,15 @@ export default function FootballBanner() {
                     </div>
 
                     {/* Right side thumbnails */}
-                    <div className="w-full md:w-1/3 flex flex-col gap-4">
-                        <div className="h-1/2 aspect-5/2 overflow-hidden rounded-4xl">
+                    <div className="w-full md:w-1/3 flex flex-row md:flex-col gap-2 md:gap-4 mt-2 md:mt-0">
+                        <div className="w-1/2 md:w-full h-auto md:h-1/2 aspect-5/2 overflow-hidden rounded-4xl">
                             <img
                                 src="/banner-hd.jpg"
                                 alt="Thumbnail 1"
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="h-1/2 aspect-5/2 overflow-hidden rounded-4xl relative">
+                        <div className="w-1/2 md:w-full h-auto md:h-1/2 aspect-5/2 overflow-hidden rounded-4xl relative">
                             <img
                                 src="/banner-hd.jpg"
                                 alt="Thumbnail 2"
@@ -47,16 +47,18 @@ export default function FootballBanner() {
                             />
                             {/* Overlay for "+2 photos" */}
                             <div className="absolute inset-0 bg-black/60 flex items-center justify-center rounded-4xl">
-                                <span className="text-white text-3xl font-semibold">+2 photos</span>
+                                <span className="text-white text-xl md:text-3xl font-semibold">+2 photos</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-6 mt-5">
+
+            {/* Desktop Layout - Only visible on md and above */}
+            <div className="hidden md:flex md:flex-row justify-between items-start gap-6 mt-5">
                 {/* Event Info */}
                 <div className="w-3/5">
-                    <h2 className="text-2xl md:text-6xl font-bold text-gray-900">
+                    <h2 className="text-6xl font-bold text-gray-900">
                         Road to the Football Finals
                     </h2>
                     <p className="text-gray-600 text-2xl mt-3">Bashundhara Sports Complex</p>
@@ -64,7 +66,7 @@ export default function FootballBanner() {
                 </div>
 
                 {/* Action Icons */}
-                <div className="w-1/6 flex gap-5 md:ml-auto">
+                <div className="w-1/6 flex gap-5 ml-auto">
                     <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-gray-100">
                         <RiShare2Line className="w-6 h-6 text-gray-600" />
                     </button>
@@ -77,7 +79,7 @@ export default function FootballBanner() {
                 </div>
 
                 {/* Join Event Card */}
-                <div className="bg-white rounded-3xl w-full md:w-1/3 shadow-sm px-5 py-5 flex flex-col items-center space-y-4">
+                <div className="bg-white rounded-3xl w-1/3 shadow-sm px-5 py-5 flex flex-col items-center space-y-4">
                     {/* Price and spots info */}
                     <div className="flex justify-between items-center w-full my-3 p-5 rounded-xl border border-gray-200">
                         <h1 className="text-red-500 text-xl font-medium">6 spots left</h1>
@@ -89,6 +91,50 @@ export default function FootballBanner() {
                     {/* CTA Button */}
                     <button
                         className="w-full bg-[#63cfa0] hover:bg-emerald-500 text-xl text-black font-semibold py-5 my-3 rounded-full transition"
+                        onClick={openModal}
+                    >
+                        Join event
+                    </button>
+                </div>
+            </div>
+
+            {/* Mobile Layout - Only visible below md */}
+            <div className="md:hidden mt-5">
+                {/* Event Info */}
+                <div className="w-full">
+                    <h2 className="text-3xl font-bold text-gray-900">
+                        Road to the Football Finals
+                    </h2>
+                    <p className="text-gray-600 text-lg mt-2">Bashundhara Sports Complex</p>
+                    <p className="text-gray-600 text-lg mt-1">Mar 14 from 7:30 PM - 9:30 PM</p>
+                </div>
+
+                {/* Action Icons */}
+                <div className="w-full flex justify-end gap-4 mt-4">
+                    <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-gray-100">
+                        <RiShare2Line className="w-5 h-5 text-gray-600" />
+                    </button>
+                    <button className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 bg-white hover:bg-gray-100">
+                        <FaHeart className="w-4 h-4 text-gray-600" />
+                    </button>
+                    <button className="w-10 h-10 flex items-center justify-center">
+                        <MoreVertical className="w-6 h-6 text-gray-600" />
+                    </button>
+                </div>
+
+                {/* Join Event Card */}
+                <div className="bg-white rounded-3xl w-full shadow-sm px-5 py-5 flex flex-col items-center space-y-4 mt-4">
+                    {/* Price and spots info */}
+                    <div className="flex justify-between items-center w-full my-3 p-5 rounded-xl border border-gray-200">
+                        <h1 className="text-red-500 text-lg font-medium">6 spots left</h1>
+                        <h1 className="text-gray-900 text-lg font-semibold">
+                            320tk /player<span className="text-gray-500 text-sm font-normal"> (both)</span>
+                        </h1>
+                    </div>
+
+                    {/* CTA Button */}
+                    <button
+                        className="w-full bg-[#63cfa0] hover:bg-emerald-500 text-lg text-black font-semibold py-4 my-3 rounded-full transition"
                         onClick={openModal}
                     >
                         Join event
@@ -120,10 +166,10 @@ export default function FootballBanner() {
                                 </svg>
                             </div>
 
-                            <h2 className="text-3xl font-semibold text-[#fde8cd] mb-8">Choose Payment <br /> Method</h2>
+                            <h2 className="text-2xl md:text-3xl font-semibold text-[#fde8cd] mb-6 md:mb-8">Choose Payment <br /> Method</h2>
 
                             {/* Payment Options */}
-                            <div className="w-full space-y-6 mb-8">
+                            <div className="w-full space-y-5 md:space-y-6 mb-6 md:mb-8">
                                 {/* bKash Option */}
                                 <label className="flex items-start gap-3 cursor-pointer">
                                     <input
@@ -134,14 +180,14 @@ export default function FootballBanner() {
                                     />
                                     <div>
                                         <div className="flex items-center gap-2">
-                                            <span className="text-xl text-white font-medium">bKash</span>
+                                            <span className="text-lg md:text-xl text-white font-medium">bKash</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
-                                                <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M22.981 8.632s-4.163 14.704-3.809 14.704s16.476 2.923 16.476 2.923Z" stroke-width="1" />
-                                                <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M22.981 8.632L6.329 6.152l12.843 17.184l2.215 10.186l14.261-7.263l3.72-8.814l-8.975 1.501m7.536 1.909H43l-3.632-3.41" stroke-width="1" />
-                                                <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="m21.387 33.522l.354 1.905l-8.016 6.421l5.447-18.512m16.476 2.923l-.531 2.879l-12.269 3.64M8.455 8.997H5L16.044 19.15" stroke-width="1" />
+                                                <path fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" d="M22.981 8.632s-4.163 14.704-3.809 14.704s16.476 2.923 16.476 2.923Z" strokeWidth="1" />
+                                                <path fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" d="M22.981 8.632L6.329 6.152l12.843 17.184l2.215 10.186l14.261-7.263l3.72-8.814l-8.975 1.501m7.536 1.909H43l-3.632-3.41" strokeWidth="1" />
+                                                <path fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" d="m21.387 33.522l.354 1.905l-8.016 6.421l5.447-18.512m16.476 2.923l-.531 2.879l-12.269 3.64M8.455 8.997H5L16.044 19.15" strokeWidth="1" />
                                             </svg>
                                         </div>
-                                        <p className="text-white text-left mt-1">
+                                        <p className="text-sm md:text-base text-white text-left mt-1">
                                             Send the payment now via bKash to confirm your spot instantly.
                                         </p>
                                     </div>
@@ -156,16 +202,16 @@ export default function FootballBanner() {
                                     />
                                     <div>
                                         <div className="flex items-center gap-2">
-                                            <span className="text-xl text-white font-medium">Cash</span>
+                                            <span className="text-lg md:text-xl text-white font-medium">Cash</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                <g fill="none" stroke="#fff" stroke-width="1.5">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m2 11l2.807-3.157A4 4 0 0 1 7.797 6.5H8m-6 13h5.5l4-3s.81-.547 2-1.5c2.5-2 0-5.166-2.5-3.5C8.964 12.857 7 14 7 14" />
+                                                <g fill="none" stroke="#fff" strokeWidth="1.5">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m2 11l2.807-3.157A4 4 0 0 1 7.797 6.5H8m-6 13h5.5l4-3s.81-.547 2-1.5c2.5-2 0-5.166-2.5-3.5C8.964 12.857 7 14 7 14" />
                                                     <path d="M8 13.5V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-6.5" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a2 2 0 1 1 0-4a2 2 0 0 1 0 4m4.5-1.99l.01-.011m-9.01.011l.01-.011" />
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a2 2 0 1 1 0-4a2 2 0 0 1 0 4m4.5-1.99l.01-.011m-9.01.011l.01-.011" />
                                                 </g>
                                             </svg>
                                         </div>
-                                        <p className="text-white text-left mt-1">
+                                        <p className="text-sm md:text-base text-white text-left mt-1">
                                             Pay the event fee directly to the host before the game starts.
                                         </p>
                                     </div>
@@ -173,7 +219,7 @@ export default function FootballBanner() {
                             </div>
 
                             {/* Continue Button */}
-                            <button className="w-full bg-[#2b2b2b] hover:bg-black text-white font-medium py-4 rounded-full transition">
+                            <button className="w-full bg-[#2b2b2b] hover:bg-black text-white font-medium py-3 md:py-4 rounded-full transition">
                                 Continue
                             </button>
                         </div>
